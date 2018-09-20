@@ -20,11 +20,8 @@ class BaseAPIRequestLog(models.Model):
         db_index=True,
     )
 
-    # NOTE: Choosing the longest verb in English language - ought be good
-    #       enough for a while
-    VIEW_METHOD_MAX_LENGTH = len('Floccinaucinihilipilificate')
     view_method = models.CharField(
-        max_length=VIEW_METHOD_MAX_LENGTH,
+        max_length=254,
         null=True,
         blank=True,
         db_index=True,
